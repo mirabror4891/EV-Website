@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="AGT">
+            <div>
+                <img src="../assets/car.png" class="headimg">
+            </div>
+            <div>
+                 <a href="../home.html"><h8 style="margin-left: 20px;">Adopt Green Transportation</h8></a>
+            </div>
+        </div>    
+        <div class="button-container">
+            <a href="../home.html"><button class="btn">HOME</button></a>    
+            <a href="../about/about.html"><button class="btn">ABOUT</button></a>
+            <a href="../news/news.html"><button class="btn">NEWS</button></a>
+            <a href="../contact/contact.html"><button class="btn">CONTACT US</button></a>
+            <a href="./sign.html"><button class="btn">SIGN IN</button></a>
+        </div>
+    </div>
+    <div class="container">
+        <h2 id="form-title">Sign In</h2>
+        <form id="auth-form">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="input-group" id="confirm-password-group" style="display: none;">
+                <input type="password" id="confirm-password" placeholder="Confirm Password">
+            </div>
+            <button type="submit" id="submit-btn" class="btn1">Sign In</button>
+        </form>
+        <p id="toggle-text">Don't have an account? <a href="#" id="toggle-link">Sign Up</a></p>
+    </div>
+    <script>
+        const formTitle = document.getElementById("form-title");
+        const authForm = document.getElementById("auth-form");
+        const submitBtn = document.getElementById("submit-btn");
+        const toggleText = document.getElementById("toggle-text");
+        const toggleLink = document.getElementById("toggle-link");
+        const confirmPasswordGroup = document.getElementById("confirm-password-group");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirm-password");
+
+        let isSignIn = true;
+
+        toggleLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        isSignIn = !isSignIn;
+
+        // Update UI elements
+        formTitle.innerText = isSignIn ? "Sign In" : "Sign Up";
+        submitBtn.innerText = isSignIn ? "Sign In" : "Sign Up";
+        confirmPasswordGroup.style.display = isSignIn ? "none" : "block";
+
+        // Update toggle text without resetting the event listener
+        toggleText.firstChild.textContent = isSignIn ? "Don't have an account? " : "Already have an account? ";
+        toggleLink.textContent = isSignIn ? "Sign Up" : "Sign In";
+        });
+
+        authForm.addEventListener("submit", (e) => {
+        if (!isSignIn) {
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                e.preventDefault();
+                alert("Passwords do not match. Please try again.");
+                return;
+                }
+            }
+        });
+        
+        function attachToggleListener() {
+            document.getElementById("toggle-link").addEventListener("click", (e) => {
+                e.preventDefault();
+                isSignIn = !isSignIn;
+                formTitle.innerText = isSignIn ? "Sign In" : "Sign Up";
+                submitBtn.innerText = isSignIn ? "Sign In" : "Sign Up";
+                confirmPasswordGroup.style.display = isSignIn ? "none" : "block";
+                toggleText.innerHTML = isSignIn ? 
+                    "Don't have an account? <a href='#' id='toggle-link'>Sign Up</a>" : 
+                    "Already have an account? <a href='#' id='toggle-link'>Sign In</a>";
+                attachToggleListener();
+            });
+        }
+        attachToggleListener();
+    </script>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

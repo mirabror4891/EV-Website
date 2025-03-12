@@ -1,0 +1,102 @@
+body{
+    background-color: #f4f4f4;;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(67,65,65,0.944)), url(../assets/background2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0.2, 0.2, 0.2, 0.2);
+}
+.input-group{
+    border-radius: 10px;
+    padding: 12px;
+}
+.input-group input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    padding: 12px;
+}
+
+.btn1{
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.btn1:hover{
+    background:#218838 ;
+}
+
+#toggle-text {
+    margin-top: 10px;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.headimg{
+    width: 60px;
+    height: 60px;
+    margin-top: -8px;
+}
+.AGT{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+.AGT a{
+    text-decoration: none;
+    color: black    ;
+
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 20px;
+    background-color: #dad7cd;
+    z-index: 1000; /* Ensures it stays on top */
+}
+.btn{
+    font-size: 18px;
+    padding: 12px 20px; /* Adjusted padding for better size */
+    border: none; /* Remove default border */ /* Default background color */
+    color:black;
+    border-radius: 12px; /* Slightly more rounded edges */
+    transition: all 0.3s ease; /* Transition for smooth effect */
+    cursor: pointer;
+    outline: none; /* Remove outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: black; /* Darker blue on hover */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
