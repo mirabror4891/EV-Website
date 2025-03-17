@@ -1,3 +1,10 @@
+:root {
+    --color-lightest: #dad7cd;
+    --color-light: #a3b18a;
+    --color-medium: #588157;
+    --color-dark: #3a5a40;
+    --color-darkest: #344e41;
+}
 body{
     background-color: #f4f4f4;;
     font-family: Arial, sans-serif;
@@ -11,7 +18,84 @@ body{
     background-size: cover;
 
 }
+button {
+    font-size: 18px;
+    padding: 12px 20px; /* Adjusted padding for better size */
+    border: none; /* Remove default border */ /* Default background color */
+    color:black;
+    border-radius: 12px; /* Slightly more rounded edges */
+    transition: all 0.3s ease; /* Transition for smooth effect */
+    cursor: pointer;
+    outline: none; /* Remove outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 
+}
+
+/* Hover effect */
+button:hover {
+    background-color: black; /* Darker blue on hover */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+.headimg{
+    width: auto;
+    height: 50px;
+}
+.AGT{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+
+}
+.AGT a{
+    text-decoration: none;
+    color: var(--color-darkest);
+}
+.logo-text {
+    font-size: 24px;
+    margin-left: 15px;
+    margin-top: 11px;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 20px;
+    background-color: #dad7cd;
+    z-index: 1000; /* Ensures it stays on top */
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.btn{
+    font-size: 18px;
+    padding: 12px 20px; /* Adjusted padding for better size */
+    border: none; /* Remove default border */ /* Default background color */
+    color:black;
+    border-radius: 12px; /* Slightly more rounded edges */
+    transition: all 0.3s ease; /* Transition for smooth effect */
+    cursor: pointer;
+    outline: none; /* Remove outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: black; /* Darker blue on hover */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
 .container{
     background-color: white;
     padding: 20px;
@@ -51,52 +135,4 @@ body{
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-}
-.headimg{
-    width: 60px;
-    height: 60px;
-    margin-top: -8px;
-}
-.AGT{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-
-}
-.AGT a{
-    text-decoration: none;
-    color: black    ;
-
-}
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 10px 10px 20px;
-    background-color: #dad7cd;
-    z-index: 1000; /* Ensures it stays on top */
-}
-.btn{
-    font-size: 18px;
-    padding: 12px 20px; /* Adjusted padding for better size */
-    border: none; /* Remove default border */ /* Default background color */
-    color:black;
-    border-radius: 12px; /* Slightly more rounded edges */
-    transition: all 0.3s ease; /* Transition for smooth effect */
-    cursor: pointer;
-    outline: none; /* Remove outline */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-
-}
-
-/* Hover effect */
-.btn:hover {
-    background-color: black; /* Darker blue on hover */
-    color: white;
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
